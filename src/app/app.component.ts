@@ -3,9 +3,22 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  standalone: false,
-  styleUrl: './app.component.css'
+  standalone: false
 })
 export class AppComponent {
-  title = '02-componente-hero';
+  public title : string = '02-componente-hero';
+
+  public contador: number = 10;
+
+  changeContador ( value: number ): void {
+    this.contador += value;
+  }
+
+  reset (): void {
+    this.contador = 10;
+  }
+
+
+
+
 }
